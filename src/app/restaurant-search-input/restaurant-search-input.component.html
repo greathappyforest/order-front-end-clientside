@@ -1,0 +1,23 @@
+<mat-card>
+    <form>
+        <div class="form-group" align="left">
+            <mat-form-field>
+                <textarea matInput placeholder="Restaurant Name" name="restaurantName" [(ngModel)]="restaurantName"></textarea>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" (click)="search1()"><md-icon>search</md-icon></button>
+        </div>
+    </form>
+
+    <form>
+        <div class="form-group" align="left">
+            <mat-form-field>
+                <mat-select placeholder="Restaurant Type" [(ngModel)]="restaurantType" name="restaurantType">
+                    <mat-option *ngFor="let type of types" [value]="type.value">
+                        {{ type.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" (click)="search2()"><md-icon>search</md-icon></button>
+        </div>
+    </form>
+</mat-card>

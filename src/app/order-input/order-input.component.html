@@ -1,0 +1,36 @@
+<mat-card>
+
+    <button mat-raised-button color="primary" type="submit" (click)="post()"><md-icon>Order</md-icon></button>
+    <br>
+    <br>
+    <textarea id="messageContents" name="value" class="form-control" rows="20" cols="80">
+{
+  "userName":"user1",
+  "restaurantName":"restaurant1",
+  "orderItems": [
+    {
+      "itemName": "zzzz",
+      "itemPrice": 3,
+      "numsOfItem": 4
+    },
+    {
+      "itemName": "aaa",
+      "itemPrice": 6,
+      "numsOfItem": 2
+    },
+    {
+      "itemName": "bbb",
+      "itemPrice": 5,
+      "numsOfItem": 3
+    }
+  ]
+}
+        </textarea>
+
+</mat-card>
+
+<div ng-if="res">
+    <mat-card>
+        {{res | json}}
+    </mat-card>
+</div>

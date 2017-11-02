@@ -1,0 +1,15 @@
+<div *ngIf="searchRes" #scrolling>
+    <mat-expansion-panel *ngFor="let restaurant of searchRes.content; let i = index">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{i+1}} . {{restaurant.restaurantName}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{restaurant.restaurantType}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <pre>
+            {{  restaurant | json  }}
+        </pre>
+    </mat-expansion-panel>
+</div>
